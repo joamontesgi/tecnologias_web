@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+
 <body>
 
     <div>
@@ -23,16 +25,19 @@
             <label for="genre">
                 Género
             </label>
-                <select name="genre_book" id="genre" required>
-                    <option value="Terror">Terror</option>
-                    <option value="Ciencia Ficción">Ciencia Ficción</option>
-                    <option value="Romance">Romance</option>
-                    <option value="Aventura">Aventura</option>
-                    <option value="Fantasía">Fantasía</option>
-                </select>
+            <select name="genre_book" id="genre" required>
+                <option value="Acción" {{ $book->genre == 'Acción' ? 'selected' : '' }}>Acción</option>
+                <option value="Terror" {{ $book->genre == 'Terror' ? 'selected' : '' }}>Terror</option>
+                <option value="Ciencia ficción" {{ $book->genre == 'Ciencia ficción' ? 'selected' : '' }}>Ciencia ficción</option>
+                <option value="Romance" {{ $book->genre == 'Romance' ? 'selected' : '' }}>Romance</option>
+                <option value="Aventura" {{ $book->genre == 'Aventura' ? 'selected' : '' }}>Aventura</option>
+                <option value="Fantasía" {{ $book->genre == 'Fantasía' ? 'selected' : '' }}>Fantasía</option>
+            </select>
+
             <button type="submit">Guardar</button>
         </form>
     </div>
 
 </body>
+
 </html>
